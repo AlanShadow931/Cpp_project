@@ -24,8 +24,8 @@ class truck: public car{
     truck(char*,int,int,int,char*);
     ~truck();
 };
-car::car(char* carname="¦Û¤p«È",int carwheel=4,int carperson=5,char* carengine="MT500-LR",int capacity=50) {
-    printf("car«Øºc¨ç¦¡°õ¦æ¤¤...\n");
+car::car(char* carname="è‡ªå°å®¢",int carwheel=4,int carperson=5,char* carengine="MT500-LR",int capacity=50) {
+    printf("carå»ºæ§‹å‡½å¼åŸ·è¡Œä¸­...\n");
     strcpy(name,carname);
     wheel=carwheel;
     person=carperson;
@@ -35,15 +35,15 @@ car::car(char* carname="¦Û¤p«È",int carwheel=4,int carperson=5,char* carengine="
     max_mileage=fuel_capacity*10;
     total_mileage=0;
 }
-truck::truck(char* truckname="¥d¨®",int truckwheel=6,int truckperson=3,int trucklength=10,char* truckengine="MAX1000-ER")
+truck::truck(char* truckname="å¡è»Š",int truckwheel=6,int truckperson=3,int trucklength=10,char* truckengine="MAX1000-ER")
 : car(truckname,truckwheel,truckperson,truckengine),length(trucklength){
-    printf("truck«Øºc¨ç¦¡°õ¦æ¤¤...\n");
+    printf("truckå»ºæ§‹å‡½å¼åŸ·è¡Œä¸­...\n");
 };
 car::~car() {
-    printf("\ncar¸Ñºc¨ç¦¡°õ¦æ¤¤...");
+    printf("\ncarè§£æ§‹å‡½å¼åŸ·è¡Œä¸­...");
 }
 truck::~truck() {
-    printf("\ntruck¸Ñºc¨ç¦¡°õ¦æ¤¤...");
+    printf("\ntruckè§£æ§‹å‡½å¼åŸ·è¡Œä¸­...");
 }
 void car::SetEngine(char* SetEngine) {
     strcpy(engine,SetEngine);
@@ -56,10 +56,10 @@ void car::run(int distance) {
         total_mileage+=distance;
         max_mileage-=distance;
         remaining_fuel-=distance/10;
-        printf("\n¦æ¾p %d ¤½¨½¡A³Ñ¾lªo¶q: %d ¤½¤É¡A¥i¦æ¨½µ{¼Æ: %d ¤½¨½¡AÁ`¨½µ{¼Æ: %d ¤½¨½",distance,remaining_fuel,max_mileage,total_mileage);
+        printf("\nè¡Œé§› %d å…¬é‡Œï¼Œå‰©é¤˜æ²¹é‡: %d å…¬å‡ï¼Œå¯è¡Œé‡Œç¨‹æ•¸: %d å…¬é‡Œï¼Œç¸½é‡Œç¨‹æ•¸: %d å…¬é‡Œ",distance,remaining_fuel,max_mileage,total_mileage);
     }
     else
-        printf("\nªo¶q¤£¨¬¡AµLªk¦æ¾p %d ¤½¨½", distance);
+        printf("\næ²¹é‡ä¸è¶³ï¼Œç„¡æ³•è¡Œé§› %d å…¬é‡Œ", distance);
 }
 void car::refill(int fuel) {
     if (fuel+remaining_fuel>fuel_capacity) {
@@ -68,14 +68,14 @@ void car::refill(int fuel) {
     else
         remaining_fuel+=fuel;
     max_mileage=remaining_fuel*10;
-    printf("\n¸É¥R¿Uªo %d ¤½¤É¡A³Ñ¾lªo¶q: %d ¤½¤É¡A¥i¦æ¨½µ{¼Æ: %d ¤½¨½",fuel,remaining_fuel,max_mileage);
+    printf("\nè£œå……ç‡ƒæ²¹ %d å…¬å‡ï¼Œå‰©é¤˜æ²¹é‡: %d å…¬å‡ï¼Œå¯è¡Œé‡Œç¨‹æ•¸: %d å…¬é‡Œ",fuel,remaining_fuel,max_mileage);
 
 }
 int main(){
     car mycar;
-    printf("%s ¦³ %d ­Ó½ü¤l¡A¥i¸ü %d ­Ó¤H¡A¤ŞÀº«¬¸¹¬O",mycar.name,mycar.wheel,mycar.person);
+    printf("%s æœ‰ %d å€‹è¼ªå­ï¼Œå¯è¼‰ %d å€‹äººï¼Œå¼•æ“å‹è™Ÿæ˜¯",mycar.name,mycar.wheel,mycar.person);
     mycar.CheckEngine();
-    printf("¡Aªo½c®e¶q¬° %d ¤½¤É",mycar.fuel_capacity);
+    printf("ï¼Œæ²¹ç®±å®¹é‡ç‚º %d å…¬å‡",mycar.fuel_capacity);
     mycar.run(50);
     mycar.refill(100);
     mycar.run(200);
