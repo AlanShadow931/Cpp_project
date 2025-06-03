@@ -1,4 +1,5 @@
-
+#include <iostream>
+#include <string>
 using namespace std;
 class car {
 public:
@@ -35,7 +36,7 @@ car::car(string carname="自小客",int carwheel=4,int carperson=5,string careng
     max_mileage=fuel_capacity*10;
     total_mileage=0;
 }
-truck::truck(string truckname="卡車",int truckwheel=6,int truckperson=3,int trucklength=10,string truckengine="MAX1000-ER")S
+truck::truck(string truckname="卡車",int truckwheel=6,int truckperson=3,int trucklength=10,string truckengine="MAX1000-ER")
 : car(truckname,truckwheel,truckperson,truckengine),length(trucklength){
     cout<<"truck建構函式執行中..."<<endl;
 };
@@ -82,4 +83,3 @@ int main(){
     delete mycar;
     return 0;
 }
-
