@@ -75,10 +75,10 @@ int main(){
     car* mycar = new car();
     cout<<mycar->name<<" 有 "<<mycar->wheel<<" 個輪子，可載 "<<mycar->person<<" 個人，引擎型號是 ";
     mycar->CheckEngine();
-    //cout<<"，油箱容量為 "<<mycar->fuel_capacity<<" 公升";
+    cout<<"，油箱容量為 "<<mycar->fuel_capacity<<" 公升";
     mycar->run(50);
-    //mycar->refill(100);
-    //mycar->run(200);
+    mycar->refill(100);
+    mycar->run(200);
     cout<<"\n---------------------------"<<endl;
     delete mycar;
     return 0;
