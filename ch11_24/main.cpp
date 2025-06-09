@@ -14,19 +14,15 @@ public:
 };
 int main() {
     ifstream read("student",ios::binary);
-    if (!read) {
-        cerr << "無法開啟檔案，請確認檔案是否存在" << endl;
-        return 1;
-    }
     read.seekg(0,ios::end);
     long filesize=read.tellg();
     read.seekg(0,ios::beg);
     int n = filesize / sizeof(student);
-    if (n == 0) {
+    if (n==0) {
         cerr << "檔案為空或格式錯誤" << endl;
         return 1;
     }
-    student* IM = new student[n];
+    student* IM=new student[n];
     read.read((char*)IM,sizeof(student) * n);
     if (!read) {
         cerr << "讀取資料失敗" << endl;
