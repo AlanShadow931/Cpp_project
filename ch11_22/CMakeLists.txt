@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.31)
-project(untitled5)
+project(ch11_22)
 
 set(CMAKE_CXX_STANDARD 20)
 

@@ -72,6 +72,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="CMakeRunConfiguration" factoryName="Application" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="528ad9bc-dcb4-469f-b2f7-4683987e3625" name="Changes" comment="" />
@@ -87,6 +94,8 @@
       <workItem from="1749399253988" duration="87000" />
       <workItem from="1749399427341" duration="99000" />
       <workItem from="1749400105910" duration="30000" />
+      <workItem from="1749445225418" duration="170000" />
+      <workItem from="1749445405682" duration="10000" />
     </task>
     <servers />
   </component>
