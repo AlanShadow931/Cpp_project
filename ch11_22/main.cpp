@@ -5,13 +5,14 @@
 #include <ctime>
 using namespace std;
 class student {
-    public:
+    private:
     string stu_id;
     int scoreComputer;
     int scoreMath;
     int scoreEng;
     float scoreAvg;
-    float avg(int a,int b,int c);
+	public:
+	float avg(int a,int b,int c);
 };
 float student::avg(int a, int b, int c) {
     return float(a+b+c)/3;
