@@ -8,7 +8,7 @@ int main() {
     ofstream output;
     cout << "請輸入檔名:";
     cin >> fileName;
-    output.open(fileName,ios::app);
+    output.open(fileName.c_str(),ios::app);
     if (output.fail()) {
         cout << "檔案發生錯誤" << endl;
         exit(1);
@@ -21,7 +21,7 @@ int main() {
         output << input << endl;
     }
     output.close();
-    readfile.open(fileName,ios::in);
+    readfile.open(fileName.c_str(),ios::in);
     if (output.fail()) {
         cout << "檔案發生錯誤" << endl;
         exit(1);
